@@ -1,0 +1,89 @@
+{
+    "model": {
+        "entities": [
+            {
+                "properties": [
+                    {
+                        "calculatedPropertyExpression": "",
+                        "dataAutoIncrement": "true",
+                        "dataLength": "0",
+                        "dataName": "ID",
+                        "dataNullable": "true",
+                        "dataPrimaryKey": "true",
+                        "dataType": "INTEGER",
+                        "dataUnique": "false",
+                        "isCalculatedProperty": "false",
+                        "name": "Id",
+                        "widgetIsMajor": "true",
+                        "widgetLength": "20",
+                        "widgetType": "TEXTBOX"
+                    },
+                    {
+                        "calculatedPropertyExpression": "",
+                        "dataAutoIncrement": "false",
+                        "dataLength": "64",
+                        "dataName": "NAME",
+                        "dataNullable": "false",
+                        "dataPrimaryKey": "false",
+                        "dataType": "VARCHAR",
+                        "dataUnique": "false",
+                        "isCalculatedProperty": "false",
+                        "name": "Name",
+                        "widgetIsMajor": "true",
+                        "widgetLength": "20",
+                        "widgetType": "TEXTBOX"
+                    },
+                    {
+                        "calculatedPropertyExpression": "",
+                        "dataAutoIncrement": "false",
+                        "dataLength": "20",
+                        "dataName": "LONGITUDE",
+                        "dataNullable": "false",
+                        "dataPrimaryKey": "false",
+                        "dataType": "DOUBLE",
+                        "dataUnique": "false",
+                        "isCalculatedProperty": "false",
+                        "name": "Longitude",
+                        "widgetIsMajor": "true",
+                        "widgetLength": "20",
+                        "widgetType": "NUMBER"
+                    },
+                    {
+                        "calculatedPropertyExpression": "",
+                        "dataAutoIncrement": "false",
+                        "dataLength": "20",
+                        "dataName": "LATITUDE",
+                        "dataNullable": "false",
+                        "dataPrimaryKey": "false",
+                        "dataType": "DOUBLE",
+                        "dataUnique": "false",
+                        "isCalculatedProperty": "false",
+                        "name": "Latitude",
+                        "widgetIsMajor": "true",
+                        "widgetLength": "20",
+                        "widgetType": "NUMBER"
+                    }
+                ],
+                "dataCount": "SELECT COUNT(*) FROM HEALTHCARE_HOSPITALS",
+                "dataName": "HEALTHCARE_HOSPITALS",
+                "dataQuery": "",
+                "feedPassword": "null",
+                "feedSchedule": "ￂﾞￃﾩe",
+                "feedUrl": "null",
+                "feedUsername": "null",
+                "icon": "h-square",
+                "layoutType": "MANAGE",
+                "menuIndex": "100",
+                "menuKey": "hospitals",
+                "menuLabel": "Hospitals",
+                "name": "Hospitals",
+                "perspectiveIcon": "h-square",
+                "perspectiveName": "Hospitals",
+                "perspectiveOrder": "100",
+                "title": "Hospitals",
+                "tooltip": "Hospitals",
+                "type": "PRIMARY"
+            }
+        ]
+    }
+}
