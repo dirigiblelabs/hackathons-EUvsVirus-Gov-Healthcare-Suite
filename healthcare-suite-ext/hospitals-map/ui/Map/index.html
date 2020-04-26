@@ -40,12 +40,14 @@
 					var marker = new google.maps.Marker({
 						map: map,
 						position: new google.maps.LatLng(hospitals[i].latitude, hospitals[i].longitude),
+						icon: "img/hospital.png"
 					});
 
 					markers.push(marker);
 					google.maps.event.addListener(marker, 'click', (function(marker, i) {
 						return function() {
-							infowindow.setContent(hospitals[i].name);
+							var infoContent = "<b>" + hospitals[i].name + "</b>" + "<br><br>Capacity: " + hospitals[i].availableCapacity + "/" + hospitals[i].capacity;
+							infowindow.setContent(infoContent);
 							infowindow.open(map, marker);
 						}
 					})(marker, i));
@@ -54,7 +56,7 @@
 					var bounds = new google.maps.LatLngBounds();
 					//  Go through each...
 					$.each(markers, function (index, marker) {
-					bounds.extend(marker.position);
+						bounds.extend(marker.position);
 					});
 					//  Fit these bounds to the map
 					map.fitBounds(bounds);
