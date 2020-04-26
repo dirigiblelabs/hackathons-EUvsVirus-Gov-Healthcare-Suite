@@ -1,0 +1,5 @@
+{
+	"description": "ReportMedicalEquipment view",
+	"extensionPoint": "launchpad-healthcare-suite-Statistics-view",
+	"module": "healthcare-suite/ui/Statistics/views/ReportMedicalEquipment/extensions/view.js"
+}

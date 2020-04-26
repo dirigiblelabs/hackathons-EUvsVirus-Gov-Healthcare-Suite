@@ -1,0 +1,5 @@
+{
+	"description": "Hospitals view",
+	"extensionPoint": "launchpad-healthcare-suite-Hospitals-view",
+	"module": "healthcare-suite/ui/Hospitals/views/master/Patients/extensions/view.js"
+}

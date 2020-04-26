@@ -1,0 +1,5 @@
+{
+	"description": "ReportMedicalEquipment menu",
+	"extensionPoint": "shell-healthcare-suite-menu",
+	"module": "healthcare-suite/views/ReportMedicalEquipment/menu/item.js"
+}

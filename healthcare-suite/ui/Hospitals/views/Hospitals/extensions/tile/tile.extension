@@ -1,0 +1,5 @@
+{
+	"description": "Hospitals tiles",
+	"extensionPoint": "launchpad-healthcare-suite-tiles",
+	"module": "healthcare-suite/ui/Hospitals/views/Hospitals/extensions/tile/tile.js"
+}

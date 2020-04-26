@@ -1,0 +1,5 @@
+{
+	"description": "Public perspective",
+	"extensionPoint": "launchpad-healthcare-suite-perspective",
+	"module": "healthcare-suite/ui/Public/extensions/perspective/perspective.js"
+}

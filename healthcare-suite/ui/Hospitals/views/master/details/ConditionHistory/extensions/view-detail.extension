@@ -1,0 +1,5 @@
+{
+	"description": "ConditionHistory view",
+	"extensionPoint": "launchpad-healthcare-suite-Hospitals-Patients-view",
+	"module": "healthcare-suite/ui/Hospitals/views/master/details/ConditionHistory/extensions/view.js"
+}

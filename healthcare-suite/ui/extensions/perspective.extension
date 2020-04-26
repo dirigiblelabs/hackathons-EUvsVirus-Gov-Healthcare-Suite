@@ -1,0 +1,5 @@
+{
+	"description": "Home perspective",
+	"extensionPoint": "launchpad-healthcare-suite-perspective",
+	"module": "healthcare-suite/ui/extensions/perspective.js"
+}

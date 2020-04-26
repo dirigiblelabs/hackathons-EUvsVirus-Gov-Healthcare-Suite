@@ -1,0 +1,5 @@
+{
+	"description": "Statistics perspective",
+	"extensionPoint": "launchpad-healthcare-suite-perspective",
+	"module": "healthcare-suite/ui/Statistics/extensions/perspective/perspective.js"
+}

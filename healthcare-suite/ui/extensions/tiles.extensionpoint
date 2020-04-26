@@ -1,0 +1,4 @@
+{
+	"description": "Extension Point for the healthcare-suite Tiles Providers",
+	"name": "launchpad-healthcare-suite-tiles"
+}

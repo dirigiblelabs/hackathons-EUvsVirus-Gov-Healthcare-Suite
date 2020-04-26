@@ -1,0 +1,5 @@
+{
+	"description": "Public tiles",
+	"extensionPoint": "launchpad-healthcare-suite-tiles",
+	"module": "healthcare-suite/ui/Public/views/Volunteers/extensions/tile/tile.js"
+}

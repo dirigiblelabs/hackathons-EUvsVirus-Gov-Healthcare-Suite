@@ -1,0 +1,5 @@
+{
+	"description": "FinancialAid view",
+	"extensionPoint": "launchpad-healthcare-suite-Public-view",
+	"module": "healthcare-suite/ui/Public/views/FinancialAid/extensions/view.js"
+}

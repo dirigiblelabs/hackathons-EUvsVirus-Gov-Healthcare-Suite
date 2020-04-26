@@ -1,0 +1,5 @@
+{
+	"description": "FinancialAid menu",
+	"extensionPoint": "shell-healthcare-suite-menu",
+	"module": "healthcare-suite/views/FinancialAid/menu/item.js"
+}

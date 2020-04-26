@@ -1,0 +1,5 @@
+{
+	"description": "Statistics tiles",
+	"extensionPoint": "launchpad-healthcare-suite-tiles",
+	"module": "healthcare-suite/ui/Statistics/views/ReportMedicalEquipment/extensions/tile/tile.js"
+}

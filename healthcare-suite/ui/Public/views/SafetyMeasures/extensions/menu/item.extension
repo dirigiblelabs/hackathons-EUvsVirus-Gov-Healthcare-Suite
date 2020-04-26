@@ -1,0 +1,5 @@
+{
+	"description": "SafetyMeasures menu",
+	"extensionPoint": "shell-healthcare-suite-menu",
+	"module": "healthcare-suite/views/SafetyMeasures/menu/item.js"
+}
