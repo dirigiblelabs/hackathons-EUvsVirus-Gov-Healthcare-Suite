@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Geocoding service</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<style>
+		#map {
+			height: 100%;
+		}
+
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="map"></div>
+
+
+	<script type="text/javascript" src="/services/v4/web/resources/jquery/2.0.3/jquery.min.js">
+	</script>
+	<script>
+		function initMap() {
+			$.get("/services/v4/js/healthcare-suite-ext/hospitals-map/api/hospitals.js", function(data) {
+				var hospitals = JSON.parse(data);
+				var map = new google.maps.Map(document.getElementById("map"), {
+					zoom: 8,
+					center: {lat: -34.397, lng: 150.644}
+				});
+
+				var infowindow = new google.maps.InfoWindow();
+				var markers = [];
+				for (var i = 0; i < hospitals.length; i ++) {
+					var marker = new google.maps.Marker({
+						map: map,
+						position: new google.maps.LatLng(hospitals[i].latitude, hospitals[i].longitude),
+					});
+
+					markers.push(marker);
+					google.maps.event.addListener(marker, 'click', (function(marker, i) {
+						return function() {
+							infowindow.setContent(hospitals[i].name);
+							infowindow.open(map, marker);
+						}
+					})(marker, i));
+
+					//  Create a new viewpoint bound
+					var bounds = new google.maps.LatLngBounds();
+					//  Go through each...
+					$.each(markers, function (index, marker) {
+					bounds.extend(marker.position);
+					});
+					//  Fit these bounds to the map
+					map.fitBounds(bounds);
+				}
+			});
+		}
+	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCP0xNNUm0UOLWjD73weVv4hQvNN2FUE3Q">
+	</script>
+</body>
+
+</html>
