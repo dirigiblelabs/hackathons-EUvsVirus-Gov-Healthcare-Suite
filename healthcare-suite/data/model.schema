@@ -55,7 +55,7 @@
                         "nullable": true,
                         "name": "NAME"
                     }, {
-                        "type": "VARCHAR",
+                        "type": "INTEGER",
                         "length": 20,
                         "nullable": true,
                         "name": "AGE"

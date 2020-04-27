@@ -17,7 +17,7 @@ var dao = daoApi.create({
 		}, {
 			name: "Age",
 			column: "AGE",
-			type: "VARCHAR",
+			type: "INTEGER",
 		}]
 });
 
