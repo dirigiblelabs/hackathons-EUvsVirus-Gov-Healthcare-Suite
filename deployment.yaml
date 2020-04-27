@@ -1,0 +1,121 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: healthcare
+  name: healthcare
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: healthcare
+  template:
+    metadata:
+      labels:
+        app: healthcare
+    spec:
+      containers:
+      - env:
+        - name: DIRIGIBLE_HOME_URL
+          value: /services/v4/web/healthcare-suite/
+        - name: DIRIGIBLE_THEME_DEFAULT
+          value: fiori
+        image: dirigiblelabs/samples-gov-healthcare-suite
+        imagePullPolicy: Always
+        name: healthcare
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: healthcare
+  name: healthcare-http
+  namespace: default
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: healthcare
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: healthcare
+  namespace: default
+spec:
+  rules:
+  - host: healthcare.{{your-host}}
+    http:
+      paths:
+      - backend:
+          serviceName: healthcare-http
+          servicePort: 8080
+        path: /
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: healthcare-public
+  name: healthcare-public
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: healthcare-public
+  template:
+    metadata:
+      labels:
+        app: healthcare-public
+    spec:
+      containers:
+      - env:
+        - name: DIRIGIBLE_HOME_URL
+          value: /services/v4/web/healthcare-public/
+        - name: DIRIGIBLE_THEME_DEFAULT
+          value: fiori
+        image: dirigiblelabs/samples-gov-healthcare-public-site
+        imagePullPolicy: Always
+        name: healthcare-public
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: healthcare-public
+  name: healthcare-public-http
+  namespace: default
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: healthcare-public
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: healthcare-public
+  namespace: default
+spec:
+  rules:
+  - host: public-healthcare.{{your-host}}
+    http:
+      paths:
+      - backend:
+          serviceName: healthcare-public-http
+          servicePort: 8080
+        path: /

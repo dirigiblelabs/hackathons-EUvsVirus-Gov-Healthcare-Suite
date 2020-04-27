@@ -1,0 +1,6 @@
+FROM dirigiblelabs/dirigible-runtime-anonymous
+ 
+RUN mkdir -p $CATALINA_HOME/target/dirigible/repository/root/registry/public/
+COPY healthcare-suite/ $CATALINA_HOME/target/dirigible/repository/root/registry/public/healthcare-suite/
+COPY healthcare-suite-data/ $CATALINA_HOME/target/dirigible/repository/root/registry/public/healthcare-suite-data/
+COPY healthcare-suite-ext/ $CATALINA_HOME/target/dirigible/repository/root/registry/public/healthcare-suite-ext/

@@ -1,0 +1,4 @@
+FROM dirigiblelabs/dirigible-runtime-anonymous
+ 
+RUN mkdir -p $CATALINA_HOME/target/dirigible/repository/root/registry/public/
+COPY healthcare-public/ $CATALINA_HOME/target/dirigible/repository/root/registry/public/healthcare-public/
