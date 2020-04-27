@@ -1224,7 +1224,7 @@
                     {
                         "calculatedPropertyExpression": "",
                         "dataAutoIncrement": "false",
-                        "dataLength": "20",
+                        "dataLength": "32",
                         "dataName": "NAME",
                         "dataNullable": "true",
                         "dataPrimaryKey": "false",
